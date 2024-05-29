@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Go-Socket"
 include(":app")
+include(":core:network")
