@@ -1,7 +1,7 @@
 package com.chat.network.di
 
 import android.util.Log
-import com.skogkatt.network.BuildConfig
+import com.chat.network.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
