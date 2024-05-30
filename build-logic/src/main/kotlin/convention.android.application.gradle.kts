@@ -1,4 +1,3 @@
-import com.android.build.api.dsl.LibraryExtension
 import com.chat.build_logic.configureComposeAndroid
 import com.chat.build_logic.configureKotlinAndroid
 
