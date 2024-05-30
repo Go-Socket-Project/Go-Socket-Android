@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -26,3 +27,5 @@ include(":feature:space")
 include(":feature:mention")
 include(":feature:search")
 include(":feature:login")
+
+gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:testClasses"))
