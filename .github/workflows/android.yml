@@ -41,3 +41,27 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      - name: Go-Socket Android CI Discord Notification
+        uses: sarisia/actions-status-discord@v1
+        if: ${{ success() }}
+        with:
+          title: ✅ Go-Socket-Android-CI 성공! ✅
+          webhook: ${{ secrets.GO_SOCKET_DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
+          image: ${{ secrets.SUCCESS_IMAGE }}
+          color: 00FF00
+          url: "https://github.com/sarisia/actions-status-discord"
+          username: Go-Socket CI 봇
+
+      - name: Go-Socket Android CI Discord Notification
+        uses: sarisia/actions-status-discord@v1
+        if: ${{ failure() }}
+        with:
+          title: ❗️ Go-Socket-Android-CI 실패! ❗️
+          webhook: ${{ secrets.GO_SOCKET_DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
+          image: ${{ secrets.FAILED_IMAGE }}
+          color: 00FF00
+          url: "https://github.com/sarisia/actions-status-discord"
+          username: Go-Socket CI 봇
