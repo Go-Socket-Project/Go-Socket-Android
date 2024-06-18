@@ -1,5 +1,6 @@
 package com.chat.designsystem.icon
 
+import androidx.compose.foundation.Image
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -207,13 +208,11 @@ fun IcSpace(
 fun IcLogo(
     modifier: Modifier = Modifier,
     contentDescription: String = "IcLogo",
-    tint: Color = Color.Unspecified,
 ) {
-    Icon(
+    Image(
         modifier = modifier,
         painter = painterResource(id = R.drawable.icon_logo),
         contentDescription = contentDescription,
-        tint = tint
     )
 }
 
