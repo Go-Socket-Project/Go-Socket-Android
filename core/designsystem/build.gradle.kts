@@ -4,6 +4,14 @@ plugins {
 
 android {
     namespace = "com.chat.designsystem"
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
+    }
 }
 
 dependencies {
