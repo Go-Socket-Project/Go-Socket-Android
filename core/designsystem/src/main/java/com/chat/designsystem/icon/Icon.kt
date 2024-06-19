@@ -208,11 +208,13 @@ fun IcSpace(
 fun IcLogo(
     modifier: Modifier = Modifier,
     contentDescription: String = "IcLogo",
+    tint: Color = Color.Unspecified,
 ) {
-    Image(
+    Icon(
         modifier = modifier,
-        painter = painterResource(id = R.drawable.icon_logo),
+        painter = painterResource(id = R.drawable.icon_rocket),
         contentDescription = contentDescription,
+        tint = tint
     )
 }
 
