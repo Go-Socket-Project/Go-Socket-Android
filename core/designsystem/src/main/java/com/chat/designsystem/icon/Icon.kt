@@ -219,6 +219,20 @@ fun IcLogo(
 }
 
 @Composable
+fun IcGoogle(
+    modifier: Modifier = Modifier,
+    contentDescription: String = "IcGoogle",
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        modifier = modifier,
+        painter = painterResource(id = R.drawable.icon_google),
+        contentDescription = contentDescription,
+        tint = tint
+    )
+}
+
+@Composable
 fun IcProfile(
     modifier: Modifier = Modifier,
     contentDescription: String = "IcLogo",
