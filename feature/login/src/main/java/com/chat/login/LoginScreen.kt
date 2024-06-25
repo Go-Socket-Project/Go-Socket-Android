@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.chat.designsystem.icon.IcGoogle
@@ -56,12 +57,12 @@ private fun LoginScreen(onLoginClick: () -> Unit) {
                     top = 24.dp,
                     bottom = 8.dp
                 ),
-                text = "Go-Socket",
+                text = stringResource(id = R.string.app_name),
                 style = Typography.b1,
                 color = Color.Black
             )
             Text(
-                text = "Simple chat application",
+                text = stringResource(id = R.string.app_introduce),
                 style = Typography.m1,
                 color = Color.Black
             )
@@ -79,7 +80,7 @@ private fun LoginScreen(onLoginClick: () -> Unit) {
                 IcGoogle()
                 Text(
                     modifier = Modifier.padding(start = 8.dp),
-                    text = "Continue with Google",
+                    text = stringResource(id = R.string.google_login),
                     style = Typography.b4,
                     color = Color(0x8A000000)
                 )
