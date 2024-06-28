@@ -22,7 +22,7 @@ allprojects {
                     "-P",
                     "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" +
                         rootProject.buildDir.absolutePath + "/compose_metrics/"
-                ),
+                )
             }
         }
     }
