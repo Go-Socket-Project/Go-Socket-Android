@@ -12,19 +12,20 @@ allprojects {
     tasks.withType(org.jetbrains.kotlin.gradle.dsl.KotlinCompile::class.java).configureEach {
         kotlinOptions {
             if (project.findProperty("enableMultiModuleComposeReports") == "true") {
-                freeCompilerArgs += listOf(
+                freeCompilerArgs += listOf
+                (
                     "-P",
                     "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" +
                         rootProject.buildDir.absolutePath + "/compose_metrics/"
                 )
 
-                freeCompilerArgs += listOf(
+                freeCompilerArgs += listOf
+                (
                     "-P",
                     "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" +
                         rootProject.buildDir.absolutePath + "/compose_metrics/"
-                )
+                ),
             }
         }
     }
 }
-
