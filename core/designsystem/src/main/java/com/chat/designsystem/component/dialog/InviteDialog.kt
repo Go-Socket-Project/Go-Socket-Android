@@ -92,7 +92,7 @@ fun InviteDialog(
                         vertical = 32.dp
                     )
                     .background(
-                        color = Color(0xFFBFBCCC),
+                        color = Color(0x14000000),
                         shape = RoundedCornerShape(8.dp)
                     )
                     .focusRequester(focusRequester)
