@@ -107,26 +107,40 @@ fun InviteDialog(
                 visualTransformation = VisualTransformation.None,
                 keyboardOptions = KeyboardOptions.Default,
                 decorationBox = { innerTextField ->
-                    TextFieldDefaults.DecorationBox(
-                        value = text,
-                        placeholder = {
+//                    TextFieldDefaults.DecorationBox(
+//                        value = text,
+//                        placeholder = {
+//                            Text(
+//                                text = "Email", // 원래 placeholder를 받아서 처리
+//                                style = Typography.m4,
+//                                color = Color(0xFFBFBCCC),
+//                            )
+//                        },
+//                        innerTextField = innerTextField,
+//                        enabled = true, // 받아서 처리
+//                        singleLine = true, // 받아서 처리
+//                        visualTransformation = VisualTransformation.None, // 받아서 처리
+//                        interactionSource = remember { MutableInteractionSource() }, // 받아서 처리
+//                        contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
+//                            start = 14.dp,
+//                            top = 9.dp,
+//                            bottom = 9.dp,
+//                        ),
+//                    )
+                    Box(
+                        modifier = modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 15.dp)
+                    ) {
+                        if (text.isEmpty()) {
                             Text(
-                                text = "Email", // 원래 placeholder를 받아서 처리
+                                text = "placeholder",
                                 style = Typography.m4,
                                 color = Color(0xFFBFBCCC),
                             )
-                        },
-                        innerTextField = innerTextField,
-                        enabled = true, // 받아서 처리
-                        singleLine = true, // 받아서 처리
-                        visualTransformation = VisualTransformation.None, // 받아서 처리
-                        interactionSource = remember { MutableInteractionSource() }, // 받아서 처리
-                        contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
-                            start = 14.dp,
-                            top = 9.dp,
-                            bottom = 9.dp,
-                        ),
-                    )
+                        }
+                        innerTextField()
+                    }
                 }
             )
 
