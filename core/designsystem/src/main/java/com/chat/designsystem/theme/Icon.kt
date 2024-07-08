@@ -1,4 +1,4 @@
-package com.chat.designsystem.icon
+package com.chat.designsystem.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.material3.Icon
