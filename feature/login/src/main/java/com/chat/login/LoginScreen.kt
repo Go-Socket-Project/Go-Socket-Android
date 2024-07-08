@@ -17,8 +17,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.chat.designsystem.icon.IcGoogle
-import com.chat.designsystem.icon.IcLogo
+import com.chat.designsystem.theme.IcGoogle
+import com.chat.designsystem.theme.IcLogo
 import com.chat.designsystem.theme.Typography
 
 @Composable
