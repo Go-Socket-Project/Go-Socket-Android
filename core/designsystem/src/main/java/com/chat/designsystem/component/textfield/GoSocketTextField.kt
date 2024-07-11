@@ -62,9 +62,7 @@ fun GoSocketTextField(
         keyboardOptions = keyboardOptions,
         decorationBox = { innerTextField ->
             Box(
-                modifier = modifier
-                    .fillMaxWidth()
-                    .padding(contentPadding)
+                modifier = modifier.padding(contentPadding)
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     leadingIcon?.let { it(leadingIconColor) }
