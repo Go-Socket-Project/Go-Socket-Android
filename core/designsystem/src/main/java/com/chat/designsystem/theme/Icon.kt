@@ -191,6 +191,20 @@ fun IcSmallX(
 }
 
 @Composable
+fun IcRoundSmallX(
+    modifier: Modifier = Modifier,
+    contentDescription: String = "IcRoundSmallX",
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        modifier = modifier,
+        painter = painterResource(id = R.drawable.icon_round_small_x),
+        contentDescription = contentDescription,
+        tint = tint
+    )
+}
+
+@Composable
 fun IcSpace(
     modifier: Modifier = Modifier,
     contentDescription: String = "IcSpace",
