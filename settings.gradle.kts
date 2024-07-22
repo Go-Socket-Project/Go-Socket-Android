@@ -27,5 +27,6 @@ include(":feature:space")
 include(":feature:mention")
 include(":feature:search")
 include(":feature:login")
+include(":baselineprofile")
 
 gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:testClasses"))
