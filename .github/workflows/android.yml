@@ -20,6 +20,12 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Install Android SDK
+        run: sdkmanager "platform-tools" "platforms;android-34" "emulator" "system-images;android-34;default;x86_64"
+
+      - name: Accept SDK Licenses
+        run: yes | sdkmanager --licenses
+
       - name: Cache Gradle Packages
         uses: actions/cache@v2
         with:
