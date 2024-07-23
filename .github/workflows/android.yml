@@ -33,6 +33,15 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Build app and benchmark
+        run: ./gradlew :app:assembleBenchmark
+
+      - name: Clean Managed Devices
+        run: ./gradlew cleanManagedDevices --unused-only
+
+      - name: Generate Baseline Profile
+        run: ./gradlew generateBaselineProfile
+
       - name: Create LOCAL_PROPERTIES
         run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
