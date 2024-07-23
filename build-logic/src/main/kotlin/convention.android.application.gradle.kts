@@ -4,6 +4,7 @@ import com.chat.build_logic.configureKotlinAndroid
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("plugin.compose")
 }
 
 android {
