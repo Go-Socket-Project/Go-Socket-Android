@@ -3816,6 +3816,7 @@ HSPLandroidx/lifecycle/ProcessLifecycleInitializer;->create(Landroid/content/Con
 HSPLandroidx/lifecycle/ProcessLifecycleInitializer;->create(Landroid/content/Context;)Ljava/lang/Object;
 HSPLandroidx/lifecycle/ProcessLifecycleInitializer;->dependencies()Ljava/util/List;
 Landroidx/lifecycle/ProcessLifecycleOwner;
+PLandroidx/lifecycle/ProcessLifecycleOwner;->$r8$lambda$ArPpV1aF4irVI-oizc48o3VfLys(Landroidx/lifecycle/ProcessLifecycleOwner;)V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;-><clinit>()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;-><init>()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->access$getNewInstance$cp()Landroidx/lifecycle/ProcessLifecycleOwner;
@@ -3824,10 +3825,13 @@ HSPLandroidx/lifecycle/ProcessLifecycleOwner;->activityResumed$lifecycle_process
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->activityStarted$lifecycle_process_release()V
 PLandroidx/lifecycle/ProcessLifecycleOwner;->activityStopped$lifecycle_process_release()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->attach$lifecycle_process_release(Landroid/content/Context;)V
+PLandroidx/lifecycle/ProcessLifecycleOwner;->delayedPauseRunnable$lambda$0(Landroidx/lifecycle/ProcessLifecycleOwner;)V
+PLandroidx/lifecycle/ProcessLifecycleOwner;->dispatchPauseIfNeeded$lifecycle_process_release()V
 PLandroidx/lifecycle/ProcessLifecycleOwner;->dispatchStopIfNeeded$lifecycle_process_release()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 Landroidx/lifecycle/ProcessLifecycleOwner$$ExternalSyntheticLambda0;
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$$ExternalSyntheticLambda0;-><init>(Landroidx/lifecycle/ProcessLifecycleOwner;)V
+PLandroidx/lifecycle/ProcessLifecycleOwner$$ExternalSyntheticLambda0;->run()V
 Landroidx/lifecycle/ProcessLifecycleOwner$Api29Impl;
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$Api29Impl;-><clinit>()V
 HSPLandroidx/lifecycle/ProcessLifecycleOwner$Api29Impl;-><init>()V

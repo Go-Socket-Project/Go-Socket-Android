@@ -36,8 +36,17 @@ jobs:
       - name: Create LOCAL_PROPERTIES
         run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
+      - name: Clean Managed Devices
+        run: ./gradlew cleanManagedDevices --unused-only
+
       - name: Generate Baseline Profile
-        run: ./gradlew :app:generateBaselineProfile -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" -Pandroid.testInstrumentationRunnerArguments.androidx.benchmark.enabledRules=BaselineProfile -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=20 -Dorg.gradle.workers.max=4
+        run: ./gradlew :app:generateBaselineProfile
+
+      - name: Run ktlint
+        run: ./gradlew ktlintCheck
+
+      - name: Build with Gradle
+        run: ./gradlew build
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
@@ -46,12 +55,6 @@ jobs:
           title: "Generate baseline profiles"
           delete-branch: true
           branch: actions/baseline-profiles
-
-      - name: Run ktlint
-        run: ./gradlew ktlintCheck
-
-      - name: Build with Gradle
-        run: ./gradlew build
 
       - name: Go-Socket Android CI Discord Notification
         uses: sarisia/actions-status-discord@v1
