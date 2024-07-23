@@ -37,7 +37,15 @@ jobs:
         run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
       - name: Generate Baseline Profile
-        run: ./gradlew generateBaselineProfile -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" -Pandroid.testInstrumentationRunnerArguments.androidx.benchmark.enabledRules=BaselineProfile -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=20 -Dorg.gradle.workers.max=4
+        run: ./gradlew :app:generateBaselineProfile -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" -Pandroid.testInstrumentationRunnerArguments.androidx.benchmark.enabledRules=BaselineProfile -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=20 -Dorg.gradle.workers.max=4
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "Generate baseline profiles"
+          title: "Generate baseline profiles"
+          delete-branch: true
+          branch: actions/baseline-profiles
 
       - name: Run ktlint
         run: ./gradlew ktlintCheck
