@@ -45,8 +45,8 @@ jobs:
       - name: Build app and benchmark
         run: ./gradlew :app:assembleBenchmarkRelease
 
-      - name: Clean Managed Devices
-        run: ./gradlew cleanManagedDevices --unused-only
+#      - name: Clean Managed Devices
+#        run: ./gradlew cleanManagedDevices --unused-only
 
       - name: Generate Baseline Profile
         run: ./gradlew :app:generateBaselineProfile
