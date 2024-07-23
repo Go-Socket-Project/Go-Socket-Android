@@ -36,9 +36,6 @@ jobs:
       - name: Create LOCAL_PROPERTIES
         run: echo '${{ secrets.LOCAL_PROPERTIES }}' > ./local.properties
 
-      - name: Build app and benchmark
-        run: ./gradlew :app:assembleBenchmark
-
       - name: Clean Managed Devices
         run: ./gradlew cleanManagedDevices --unused-only
 
