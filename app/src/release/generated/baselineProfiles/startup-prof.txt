@@ -20,7 +20,6 @@ HSPLandroidx/activity/ComponentActivity;->getViewModelStore()Landroidx/lifecycle
 HSPLandroidx/activity/ComponentActivity;->initializeViewTreeOwners()V
 HSPLandroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 PLandroidx/activity/ComponentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
-PLandroidx/activity/ComponentActivity;->onTrimMemory(I)V
 PLandroidx/activity/ComponentActivity;->onUserLeaveHint()V
 HSPLandroidx/activity/ComponentActivity;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 Landroidx/activity/ComponentActivity$$ExternalSyntheticLambda0;
@@ -2805,7 +2804,6 @@ HSPLandroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$obtainImageV
 PLandroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$obtainImageVectorCache$1$invoke$$inlined$onDispose$1;->dispose()V
 Landroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$obtainImageVectorCache$callbacks$1$1;
 HSPLandroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$obtainImageVectorCache$callbacks$1$1;-><init>(Landroid/content/res/Configuration;Landroidx/compose/ui/res/ImageVectorCache;)V
-PLandroidx/compose/ui/platform/AndroidCompositionLocals_androidKt$obtainImageVectorCache$callbacks$1$1;->onTrimMemory(I)V
 Landroidx/compose/ui/platform/AndroidFontResourceLoader;
 HSPLandroidx/compose/ui/platform/AndroidFontResourceLoader;-><clinit>()V
 HSPLandroidx/compose/ui/platform/AndroidFontResourceLoader;-><init>(Landroid/content/Context;)V
@@ -3157,7 +3155,6 @@ HSPLandroidx/compose/ui/platform/coreshims/ViewCompatShims$Api30Impl;->setImport
 Landroidx/compose/ui/res/ImageVectorCache;
 HSPLandroidx/compose/ui/res/ImageVectorCache;-><clinit>()V
 HSPLandroidx/compose/ui/res/ImageVectorCache;-><init>()V
-PLandroidx/compose/ui/res/ImageVectorCache;->clear()V
 Landroidx/compose/ui/semantics/EmptySemanticsElement;
 HSPLandroidx/compose/ui/semantics/EmptySemanticsElement;-><clinit>()V
 HSPLandroidx/compose/ui/semantics/EmptySemanticsElement;-><init>()V
@@ -4410,6 +4407,7 @@ HSPLkotlin/collections/ArrayDeque;->getSize()I
 HSPLkotlin/collections/ArrayDeque;->incremented(I)I
 HSPLkotlin/collections/ArrayDeque;->isEmpty()Z
 HSPLkotlin/collections/ArrayDeque;->positiveMod(I)I
+HSPLkotlin/collections/ArrayDeque;->registerModification()V
 HSPLkotlin/collections/ArrayDeque;->removeFirst()Ljava/lang/Object;
 HSPLkotlin/collections/ArrayDeque;->removeFirstOrNull()Ljava/lang/Object;
 Lkotlin/collections/ArrayDeque$Companion;
