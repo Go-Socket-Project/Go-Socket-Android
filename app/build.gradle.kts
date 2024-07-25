@@ -26,6 +26,6 @@ dependencies {
     implementation(libs.androidx.profileinstaller)
 }
 
-//baselineProfile {
-//    automaticGenerationDuringBuild = true
-//}
+baselineProfile {
+    automaticGenerationDuringBuild = true
+}
