@@ -27,5 +27,5 @@ dependencies {
 }
 
 baselineProfile {
-    automaticGenerationDuringBuild = true
+    automaticGenerationDuringBuild = false
 }
