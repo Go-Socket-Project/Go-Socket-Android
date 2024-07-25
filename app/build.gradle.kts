@@ -4,15 +4,15 @@ plugins {
     alias(libs.plugins.baselineprofile)
 }
 
-android {
-    baselineProfile {
-        buildTypes {
-            getByName("release") {
-                automaticGenerationDuringBuild = true
-            }
-        }
-    }
-}
+//android {
+//    baselineProfile {
+//        buildTypes {
+//            getByName("release") {
+//                automaticGenerationDuringBuild = true
+//            }
+//        }
+//    }
+//}
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -24,4 +24,8 @@ dependencies {
 
     baselineProfile(project(":baselineprofile"))
     implementation(libs.androidx.profileinstaller)
+}
+
+baselineProfile {
+    automaticGenerationDuringBuild = true
 }
