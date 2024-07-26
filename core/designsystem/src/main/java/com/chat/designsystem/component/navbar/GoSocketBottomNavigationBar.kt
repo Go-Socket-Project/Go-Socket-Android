@@ -1,5 +1,6 @@
 package com.chat.designsystem.component.navbar
 
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -21,10 +22,13 @@ import com.chat.designsystem.theme.IcSpace
 
 // TODO: NavHostController로 제어하도록 수정
 @Composable
-fun GoSocketBottomNavigationBar() {
+fun GoSocketBottomNavigationBar(modifier: Modifier = Modifier) {
     var selectedIndex by remember { mutableIntStateOf(-1) }
 
-    NavigationBar(containerColor = Color(0xFFF8F9FB)) {
+    NavigationBar(
+        modifier = modifier.height(60.dp),
+        containerColor = Color(0xFFF8F9FB)
+    ) {
         repeat(5) {
             NavigationBarItem(
                 selected = selectedIndex == it,
