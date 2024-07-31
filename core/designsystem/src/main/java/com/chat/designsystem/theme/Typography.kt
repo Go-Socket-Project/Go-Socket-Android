@@ -53,6 +53,20 @@ object Typography {
     )
 
     @Stable
+    val b5 = TextStyle(
+        fontFamily = suit,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold
+    )
+
+    @Stable
+    val b6 = TextStyle(
+        fontFamily = suit,
+        fontSize = 12.sp,
+        fontWeight = FontWeight.Bold
+    )
+
+    @Stable
     val sb1 = TextStyle(
         fontFamily = suit,
         fontSize = 20.sp,
