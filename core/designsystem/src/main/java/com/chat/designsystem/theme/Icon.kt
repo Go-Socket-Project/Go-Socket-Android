@@ -149,6 +149,20 @@ fun IcPlus(
 }
 
 @Composable
+fun IcHeavyPlus(
+    modifier: Modifier = Modifier,
+    contentDescription: String = "IcHeavyPlus",
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        modifier = modifier,
+        painter = painterResource(id = R.drawable.icon_heavy_plus),
+        contentDescription = contentDescription,
+        tint = tint
+    )
+}
+
+@Composable
 fun IcSearch(
     modifier: Modifier = Modifier,
     contentDescription: String = "IcSearch",
@@ -255,6 +269,20 @@ fun IcFriend(
     Icon(
         modifier = modifier,
         painter = painterResource(id = R.drawable.icon_friend),
+        contentDescription = contentDescription,
+        tint = tint
+    )
+}
+
+@Composable
+fun IcGrayRocket(
+    modifier: Modifier = Modifier,
+    contentDescription: String = "IcGrayRocket",
+    tint: Color = Color.Unspecified,
+) {
+    Icon(
+        modifier = modifier,
+        painter = painterResource(id = R.drawable.icon_gray_rocket),
         contentDescription = contentDescription,
         tint = tint
     )
