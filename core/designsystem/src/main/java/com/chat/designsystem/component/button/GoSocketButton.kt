@@ -70,6 +70,12 @@ fun GoSocketButtonPreview() {
 
         GoSocketButton(
             text = "GoSocketButton",
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF7D7D)),
+            onClick = {}
+        ) {}
+
+        GoSocketButton(
+            text = "GoSocketButton",
             onClick = {}
         ) { IcCreateDirectMessage(modifier = Modifier.size(22.dp, 18.dp), tint = Color.White) }
     }
