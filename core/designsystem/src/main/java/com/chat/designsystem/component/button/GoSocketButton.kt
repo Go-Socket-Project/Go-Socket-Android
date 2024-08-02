@@ -1,7 +1,11 @@
 package com.chat.designsystem.component.button
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
@@ -15,6 +19,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.chat.designsystem.theme.IcCreateDirectMessage
 import com.chat.designsystem.theme.Typography
 
 @Composable
@@ -30,6 +35,7 @@ fun GoSocketButton(
     border: BorderStroke? = null,
     contentPadding: PaddingValues = PaddingValues(horizontal = 18.dp, vertical = 9.dp),
     onClick: () -> Unit,
+    leadingIcon: @Composable (() -> Unit)? = null,
 ) {
     Button(
         modifier = modifier,
@@ -41,6 +47,10 @@ fun GoSocketButton(
         contentPadding = contentPadding,
         onClick = onClick,
     ) {
+        if (leadingIcon != null) {
+            leadingIcon()
+            Spacer(modifier = Modifier.width(7.dp))
+        }
         Text(
             text = text,
             color = textColor,
@@ -52,5 +62,15 @@ fun GoSocketButton(
 @Preview
 @Composable
 fun GoSocketButtonPreview() {
-    GoSocketButton(text = "GoSocketButton") {}
+    Column {
+        GoSocketButton(
+            text = "GoSocketButton",
+            onClick = {}
+        ) {}
+
+        GoSocketButton(
+            text = "GoSocketButton",
+            onClick = {}
+        ) { IcCreateDirectMessage(modifier = Modifier.size(22.dp, 18.dp), tint = Color.White) }
+    }
 }
