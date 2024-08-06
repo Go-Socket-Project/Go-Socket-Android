@@ -33,6 +33,8 @@ fun GoSocketBottomSheet(
     content: @Composable () -> Unit,
 ) {
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val insets = ViewCompat.getRootWindowInsets(LocalView.current)
+    val navigationBarHeight = insets?.getInsets(WindowInsetsCompat.Type.navigationBars())?.bottom?.toDp() ?: 0.dp
 
     ModalBottomSheet(
         sheetState = bottomSheetState,
@@ -40,7 +42,7 @@ fun GoSocketBottomSheet(
         containerColor = Color.White,
         onDismissRequest = onDismissRequest
     ) {
-        Column(modifier = modifier.padding(start = 10.dp, top = 6.dp, end = 10.dp, bottom = 28.dp)) {
+        Column(modifier = modifier.padding(start = 10.dp, top = 6.dp, end = 10.dp, bottom = 28.dp + navigationBarHeight)) {
             content()
         }
     }
@@ -67,3 +69,7 @@ fun GoSocketBottomSheetPreview() {
         }
     }
 }
+
+// TODO 추 후 extension 모듈 생성 후 이동 필요
+@Composable
+fun Int.toDp(): Dp = with(LocalDensity.current) { this@toDp.toDp() }
