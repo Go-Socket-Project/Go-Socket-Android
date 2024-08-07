@@ -4,9 +4,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -16,6 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.tooling.preview.Preview
@@ -40,7 +44,17 @@ fun GoSocketBottomSheet(
         sheetState = bottomSheetState,
         shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
         containerColor = Color.White,
-        onDismissRequest = onDismissRequest
+        dragHandle = {
+            HorizontalDivider(
+                modifier = Modifier
+                    .width(32.dp)
+                    .clip(CircleShape)
+                    .padding(top = 6.dp, bottom = 8.dp),
+                thickness = 4.dp,
+                color = Color(0xFFC6C6C8)
+            )
+        },
+        onDismissRequest = onDismissRequest,
     ) {
         Column(modifier = modifier.padding(start = 10.dp, top = 6.dp, end = 10.dp, bottom = 28.dp + navigationBarHeight)) {
             content()
