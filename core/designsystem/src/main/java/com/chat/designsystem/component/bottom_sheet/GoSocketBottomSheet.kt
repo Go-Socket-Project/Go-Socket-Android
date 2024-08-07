@@ -56,7 +56,7 @@ fun GoSocketBottomSheet(
         },
         onDismissRequest = onDismissRequest,
     ) {
-        Column(modifier = modifier.padding(start = 10.dp, top = 6.dp, end = 10.dp, bottom = 28.dp + navigationBarHeight)) {
+        Column(modifier = modifier.padding(start = 10.dp, top = 6.dp, end = 10.dp, bottom = 14.dp + navigationBarHeight)) {
             content()
         }
     }
