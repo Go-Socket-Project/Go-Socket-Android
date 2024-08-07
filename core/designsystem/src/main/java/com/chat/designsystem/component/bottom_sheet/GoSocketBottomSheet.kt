@@ -17,13 +17,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.chat.designsystem.util.toDp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,7 +33,8 @@ fun GoSocketBottomSheet(
 ) {
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val insets = ViewCompat.getRootWindowInsets(LocalView.current)
-    val navigationBarHeight = insets?.getInsets(WindowInsetsCompat.Type.navigationBars())?.bottom?.toDp() ?: 0.dp
+    val context = LocalView.current.context
+    val navigationBarHeight = insets?.getInsets(WindowInsetsCompat.Type.navigationBars())?.bottom?.toDp(context)?.dp ?: 0.dp
 
     ModalBottomSheet(
         sheetState = bottomSheetState,
@@ -69,7 +69,3 @@ fun GoSocketBottomSheetPreview() {
         }
     }
 }
-
-// TODO 추 후 extension 모듈 생성 후 이동 필요
-@Composable
-fun Int.toDp(): Dp = with(LocalDensity.current) { this@toDp.toDp() }
