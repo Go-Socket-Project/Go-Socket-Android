@@ -3,6 +3,7 @@ import com.chat.build_logic.configureKotlinAndroid
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("convention.verify.detekt")
 }
 
 android {
