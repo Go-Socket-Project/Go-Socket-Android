@@ -34,7 +34,7 @@ fun GoSocketBottomNavigationBar(modifier: Modifier = Modifier) {
                 selected = selectedIndex == it,
                 onClick = { selectedIndex = it },
                 icon = {
-                    when(it) {
+                    when (it) {
                         0 -> IcHome(modifier = Modifier.size(30.dp), tint = if (selectedIndex == it) Color(0xFF6263FB) else Color(0xFF848484))
                         1 -> IcDirectMessage(modifier = Modifier.size(30.dp), tint = if (selectedIndex == it) Color(0xFF6263FB) else Color(0xFF848484))
                         2 -> IcSpace(modifier = Modifier.size(30.dp), tint = if (selectedIndex == it) Color(0xFF6263FB) else Color(0xFF848484))

@@ -36,10 +36,10 @@ complexity:
     threshold: 500
   LongMethod: # 긴 메서드 크기 설정
     active: true
-    threshold: 50
+    threshold: 400
   LongParameterList: # 특정 임계값보다 많은 매개변수가 있는 함수와 생성자
     active: true
-    functionThreshold: 6
+    functionThreshold: 20
     constructorThreshold: 7
     ignoreDefaultParameters: false # 기본값이 있는 매개변수 포함
     ignoreDataClasses: true # 데이터 클래스에 대해서 무시
@@ -85,6 +85,17 @@ exceptions:
 
 formatting:
   active: true
+  ImportOrdering:
+    active: false
+  MaximumLineLength:
+    active: true
+    maxLineLength: 160
+  ArgumentListWrapping:
+    active: false
+  Wrapping:
+    active: false
+  PackageName:
+    active: false
 
 naming:
   active: true
@@ -96,6 +107,8 @@ naming:
     active: true
   NonBooleanPropertyPrefixedWithIs:
     active: true
+  PackageNaming:
+    active: false
 
 performance:
   active: true

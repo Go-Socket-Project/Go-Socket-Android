@@ -29,4 +29,4 @@ include(":feature:search")
 include(":feature:login")
 include(":baselineprofile")
 
-gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:testClasses"))
+//gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:testClasses"))
