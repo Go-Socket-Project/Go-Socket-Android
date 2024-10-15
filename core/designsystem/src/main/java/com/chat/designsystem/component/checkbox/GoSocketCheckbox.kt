@@ -35,7 +35,7 @@ fun GoSocketCheckbox(
             .clip(RoundedCornerShape(8.dp))
             .border(
                 width = 2.dp,
-                color =  if (isChecked) P1 else N3,
+                color = if (isChecked) P1 else N3,
                 shape = RoundedCornerShape(8.dp)
             )
             .clickableNoRipple {

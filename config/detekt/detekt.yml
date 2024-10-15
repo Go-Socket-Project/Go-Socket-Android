@@ -1,0 +1,124 @@
+build:
+  maxIssues: 0
+
+config:
+  validation: true
+  warningsAsErrors: true
+
+complexity:
+  active: true
+  ComplexCondition: # 복잡한 조건 설정
+    active: true
+    threshold: 5
+  ComplexInterface: # 많은 함수 및 속성을 포함하는 인터페이스
+    active: true
+    threshold: 10
+    includeStaticDeclarations: false
+    includePrivateDeclarations: false
+  CyclomaticComplexMethod: # 독립적 경로의 수가 많은 복잡한 메서드 설정
+    active: true
+    threshold: 50
+    ignoreSingleWhenExpression: false # when 표현식 하나인 메서드 무시
+    ignoreSimpleWhenEntries: false # 간단한 항목(중괄호 없음)을 무시
+    ignoreNestingFunctions: false # if 나 for 문 대신 자주 사용되는 함수 무시
+    nestingFunctions:
+      - 'also'
+      - 'apply'
+      - 'forEach'
+      - 'isNotNull'
+      - 'ifNull'
+      - 'let'
+      - 'run'
+      - 'use'
+      - 'with'
+  LargeClass: # 큰 클래스 크기 설정
+    active: true
+    threshold: 500
+  LongMethod: # 긴 메서드 크기 설정
+    active: true
+    threshold: 400
+  LongParameterList: # 특정 임계값보다 많은 매개변수가 있는 함수와 생성자
+    active: true
+    functionThreshold: 20
+    constructorThreshold: 7
+    ignoreDefaultParameters: false # 기본값이 있는 매개변수 포함
+    ignoreDataClasses: true # 데이터 클래스에 대해서 무시
+  TooManyFunctions:
+    active: true
+    thresholdInFiles: 30
+    thresholdInClasses: 20
+    thresholdInInterfaces: 10
+    thresholdInObjects: 20
+    thresholdInEnums: 5
+    ignoreDeprecated: true # @Deprecated 함수를 카운트에서 제외
+    ignorePrivate: true # private 접근 제어자 함수를 카운트에서 제외
+    ignoreOverridden: false # 오버라이드한 함수를 카운트에 포함
+  NestedBlockDepth: # 중첩된 코드 블록
+    active: true
+    threshold: 10
+
+coroutines:
+  active: true
+  GlobalCoroutineUsage:
+    active: false
+  RedundantSuspendModifier:
+    active: false
+  SleepInsteadOfDelay:
+    active: false
+  SuspendFunWithFlowReturnType:
+    active: false
+
+empty-blocks:
+  active: true
+
+exceptions:
+  active: true
+  InstanceOfCheckForException: # 예외 유형을 검사하는 catch 블록
+    active: false
+  TooGenericExceptionThrown: # 너무 일반적인 유형의 Exception
+    active: false
+    exceptionNames:
+      - 'Error'
+      - 'Exception'
+      - 'RuntimeException'
+      - 'Throwable'
+
+formatting:
+  active: true
+  ImportOrdering:
+    active: false
+  MaximumLineLength:
+    active: true
+    maxLineLength: 160
+  ArgumentListWrapping:
+    active: false
+  Wrapping:
+    active: false
+  PackageName:
+    active: false
+
+naming:
+  active: true
+  ConstructorParameterNaming: # 지정된 명명 규칙을 따르지 않는 생성자 매개변수
+    active: false
+  FunctionNaming: # 지정된 명명 규칙을 따르지 않는 함수 이름
+    active: false
+  BooleanPropertyNaming:
+    active: true
+  NonBooleanPropertyPrefixedWithIs:
+    active: true
+  PackageNaming:
+    active: false
+
+performance:
+  active: true
+  ForEachOnRange: # 성능 비용이 발생하는 forEach 구문
+    active: false
+  SpreadOperator: # 성능 저하 발생하는 spread 연산자
+    active: false
+
+potential-bugs:
+  active: true
+
+style:
+  active: false

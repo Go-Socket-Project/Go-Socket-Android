@@ -38,7 +38,9 @@ fun GoSocketBottomSheet(
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val insets = ViewCompat.getRootWindowInsets(LocalView.current)
     val context = LocalView.current.context
-    val navigationBarHeight = insets?.getInsets(WindowInsetsCompat.Type.navigationBars())?.bottom?.toDp(context)?.dp ?: 0.dp
+    val navigationBarHeight =
+        insets?.getInsets(WindowInsetsCompat.Type.navigationBars())?.bottom?.toDp(context)?.dp
+            ?: 0.dp
 
     ModalBottomSheet(
         sheetState = bottomSheetState,
@@ -56,7 +58,14 @@ fun GoSocketBottomSheet(
         },
         onDismissRequest = onDismissRequest,
     ) {
-        Column(modifier = modifier.padding(start = 10.dp, top = 6.dp, end = 10.dp, bottom = 14.dp + navigationBarHeight)) {
+        Column(
+            modifier = modifier.padding(
+                start = 10.dp,
+                top = 6.dp,
+                end = 10.dp,
+                bottom = 14.dp + navigationBarHeight
+            )
+        ) {
             content()
         }
     }
