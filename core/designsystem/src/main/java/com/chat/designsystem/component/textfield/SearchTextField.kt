@@ -13,8 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.chat.designsystem.theme.IcRoundSmallX
 import com.chat.designsystem.theme.IcSearch
-import com.chat.designsystem.theme.N2
-import com.chat.designsystem.theme.N5
+import com.chat.designsystem.theme.White
 import com.chat.designsystem.util.clickableNoRipple
 
 @Composable
@@ -28,10 +27,9 @@ fun SearchTextField(
     GoSocketTextField(
         modifier = modifier,
         value = value,
-        placeholder = "Your message",
-        backgroundColor = N5,
-        trailingIconColor = N2,
-        backgroundShape = RoundedCornerShape(16.dp),
+        placeholder = "검색어를 입력하세요",
+        backgroundColor = White,
+        backgroundShape = RoundedCornerShape(8.dp),
         onValueChange = { value = it },
         leadingIcon = {
             IcSearch(
