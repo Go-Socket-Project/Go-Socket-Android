@@ -22,8 +22,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.chat.designsystem.theme.BG
+import com.chat.designsystem.theme.Black
 import com.chat.designsystem.theme.IcSearch
 import com.chat.designsystem.theme.IcSend
+import com.chat.designsystem.theme.N3
 import com.chat.designsystem.theme.Typography
 
 @Composable
@@ -36,9 +39,9 @@ fun GoSocketTextField(
     contentPadding: PaddingValues = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
     visualTransformation: VisualTransformation = VisualTransformation.None,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
-    backgroundColor: Color = Color.White,
-    textColor: Color = Color.Black,
-    placeholderColor: Color = Color(0xFFBFBCCC),
+    backgroundColor: Color = BG,
+    textColor: Color = Black,
+    placeholderColor: Color = N3,
     leadingIconColor: Color = placeholderColor,
     trailingIconColor: Color = placeholderColor,
     backgroundShape: Shape = RoundedCornerShape(8.dp),

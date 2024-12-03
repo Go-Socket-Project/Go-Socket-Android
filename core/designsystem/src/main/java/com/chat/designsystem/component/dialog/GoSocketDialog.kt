@@ -27,11 +27,12 @@ import androidx.compose.ui.window.DialogProperties
 import com.chat.designsystem.component.button.GoSocketButton
 import com.chat.designsystem.theme.IcSmallX
 import com.chat.designsystem.theme.Typography
+import com.chat.designsystem.theme.White
 
 @Composable
 fun GoSocketDialog(
     modifier: Modifier = Modifier,
-    background: Color = Color.White,
+    background: Color = White,
     backgroundShape: Shape = RoundedCornerShape(8.dp),
     padding: PaddingValues = PaddingValues(0.dp),
     properties: DialogProperties = DialogProperties(),

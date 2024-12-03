@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.chat.designsystem.theme.IcCreateDirectMessage
 import com.chat.designsystem.theme.IcCreateSpace
 import com.chat.designsystem.theme.Typography
+import com.chat.designsystem.theme.White
 import com.chat.designsystem.util.clickableNoRipple
 
 @Composable
@@ -82,7 +83,7 @@ fun CreateMessageBottomSheetPreview() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(White)
     ) {
         if (isBottomSheetOpen) {
             CreateMessageBottomSheet(
