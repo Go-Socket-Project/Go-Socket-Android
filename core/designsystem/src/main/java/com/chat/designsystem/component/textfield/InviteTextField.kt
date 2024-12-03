@@ -8,21 +8,24 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.chat.designsystem.theme.N5
 
 @Composable
-fun InviteTextField(modifier: Modifier = Modifier) {
+fun InviteTextField(
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(8.dp)
+) {
     var value by remember { mutableStateOf("") }
 
     GoSocketTextField(
         modifier = modifier,
         value = value,
-        placeholder = "Email",
-        backgroundColor = Color(0x14000000),
+        placeholder = "받는사람 : 검색하기",
+        backgroundColor = N5,
         backgroundShape = RoundedCornerShape(8.dp),
-        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 9.dp),
+        contentPadding = contentPadding,
         onValueChange = { value = it },
     )
 }
