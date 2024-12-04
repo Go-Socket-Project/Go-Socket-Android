@@ -25,7 +25,6 @@ fun MessageTextField(
         modifier = modifier,
         value = value,
         placeholder = "Your message",
-        backgroundColor = N5,
         trailingIconColor = N2,
         backgroundShape = RoundedCornerShape(16.dp),
         onValueChange = { value = it },
