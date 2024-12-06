@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.chat.designsystem.theme.IcCreateDirectMessage
 import com.chat.designsystem.theme.Typography
+import com.chat.designsystem.theme.White
 
 @Composable
 fun GoSocketButton(
@@ -29,7 +30,7 @@ fun GoSocketButton(
     enabled: Boolean = true,
     shape: Shape = RoundedCornerShape(8.dp),
     colors: ButtonColors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6263FB)),
-    textColor: Color = Color.White,
+    textColor: Color = White,
     textStyle: TextStyle = Typography.b5,
     elevation: ButtonElevation? = null,
     border: BorderStroke? = null,
@@ -77,6 +78,6 @@ fun GoSocketButtonPreview() {
         GoSocketButton(
             text = "GoSocketButton",
             onClick = {}
-        ) { IcCreateDirectMessage(modifier = Modifier.size(22.dp, 18.dp), tint = Color.White) }
+        ) { IcCreateDirectMessage(modifier = Modifier.size(22.dp, 18.dp), tint = White) }
     }
 }

@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.chat.designsystem.theme.IcCreateDirectMessage
+import com.chat.designsystem.theme.White
 
 @Composable
 fun InviteFriendButton(
@@ -21,7 +22,7 @@ fun InviteFriendButton(
         shape = RoundedCornerShape(30.dp),
         border = BorderStroke(1.dp, Color(0x3B1E2432)),
         onClick = onClick,
-    ) { IcCreateDirectMessage(modifier = Modifier.size(22.dp, 18.dp), tint = Color.White) }
+    ) { IcCreateDirectMessage(modifier = Modifier.size(22.dp, 18.dp), tint = White) }
 }
 
 @Preview

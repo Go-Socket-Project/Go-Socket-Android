@@ -14,11 +14,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.chat.designsystem.theme.White
 
 @Composable
 fun GoSocketAppbar(
     modifier: Modifier = Modifier,
-    background: Color = Color.White,
+    background: Color = White,
     padding: PaddingValues = PaddingValues(0.dp),
     horizontalArrangement: Arrangement.HorizontalOrVertical = Arrangement.spacedBy(8.dp),
     content: @Composable RowScope.() -> Unit = {},

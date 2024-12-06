@@ -7,10 +7,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.chat.designsystem.theme.IcSend
+import com.chat.designsystem.theme.N2
+import com.chat.designsystem.theme.N5
 import com.chat.designsystem.util.clickableNoRipple
 
 @Composable
@@ -24,8 +25,7 @@ fun MessageTextField(
         modifier = modifier,
         value = value,
         placeholder = "Your message",
-        backgroundColor = Color(0xFFF2F2F4),
-        trailingIconColor = Color(0xFF656B80),
+        trailingIconColor = N2,
         backgroundShape = RoundedCornerShape(16.dp),
         onValueChange = { value = it },
         trailingIcon = {

@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.chat.designsystem.theme.White
 import com.chat.designsystem.util.toDp
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -45,7 +46,7 @@ fun GoSocketBottomSheet(
     ModalBottomSheet(
         sheetState = bottomSheetState,
         shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
-        containerColor = Color.White,
+        containerColor = White,
         dragHandle = {
             HorizontalDivider(
                 modifier = Modifier
@@ -79,7 +80,7 @@ fun GoSocketBottomSheetPreview() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(White)
     ) {
         if (isBottomSheetOpen) {
             GoSocketBottomSheet(onDismissRequest = { isBottomSheetOpen = false }) {

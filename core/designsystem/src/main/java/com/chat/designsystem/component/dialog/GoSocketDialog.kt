@@ -12,7 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,16 +24,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.chat.designsystem.component.button.GoSocketButton
 import com.chat.designsystem.theme.IcSmallX
 import com.chat.designsystem.theme.Typography
+import com.chat.designsystem.theme.White
 
 @Composable
 fun GoSocketDialog(
     modifier: Modifier = Modifier,
-    background: Color = Color.White,
+    background: Color = White,
     backgroundShape: Shape = RoundedCornerShape(8.dp),
     padding: PaddingValues = PaddingValues(0.dp),
     properties: DialogProperties = DialogProperties(),
+    buttonText: String = "확인",
+    buttonColors: ButtonColors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6263FB)),
     onDismissRequest: () -> Unit = {},
     onButtonClicked: () -> Unit = {},
     content: @Composable ColumnScope.() -> Unit = {},
@@ -66,27 +70,20 @@ fun GoSocketDialog(
                     .padding(vertical = 11.dp),
                 horizontalArrangement = Arrangement.End
             ) {
-                Button(
+                GoSocketButton(
+                    text = buttonText,
                     modifier = Modifier
                         .height(28.dp)
                         .padding(end = 17.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFF6263FB),
-                        contentColor = Color.White
-                    ),
+                    colors = buttonColors,
+                    textStyle = Typography.m5,
                     shape = RoundedCornerShape(4.dp),
                     contentPadding = PaddingValues(
                         horizontal = 22.dp,
                         vertical = 6.dp
                     ),
-                    onClick = { onButtonClicked() }
-                ) {
-                    Text(
-                        modifier = Modifier,
-                        text = "만들기",
-                        style = Typography.m5,
-                    )
-                }
+                    onClick = onButtonClicked
+                )
             }
         }
     }
